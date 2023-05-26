@@ -1,11 +1,6 @@
 
 
 
-
-
-
-
-
 *
 {
 	margin: 0;
@@ -78,8 +73,9 @@
 	padding: 0 0 5px 0 !important;
     display: unset !important;
 }
-.navbar-brand img{
-	width:110px;
+.navbar-brand {
+	color: #ffffff!important;
+    font-weight: 800;
 }
 .span{
 	color: #fff !important;
@@ -93,30 +89,35 @@
 border-bottom: 2px solid #fff;
 }
  
-.navbar img{
-    width: 80px;
-    margin: 5px 0 0 20px;
-}
+
 
 
 
 body{
-    background: #8E0E00;  /* fallback for old browsers */
+    background: #0d0c0f!important;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     
 }
 .heading h1{
-    font-family: 'Andada Pro', serif;
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
 }
 .movie{
     padding: 10px;
 }
+.movie:hover{
+    padding: 10px;
+    /* transform: scaleY(1.07);
+    transform: scalex(1.03); */
+    transform: rotate(2deg);
+    transition: ease-in 0.3s;
+}
 
 
 .movie img{
-    max-width: 200px;
+    max-width: 400px;
+    max-height: 200px;
     border-radius: 4px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }

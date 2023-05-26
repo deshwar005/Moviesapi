@@ -18,12 +18,12 @@ function showmovies(data)
    Main.innerHTML='';
 
   data.forEach(movie => {
-      const {title,poster_path,id,overview}=movie;
+      const {title,poster_path,id,overview,vote_average}=movie;
       const moviess=document.createElement('div');
       moviess.classList.add('movie');
 
       moviess.innerHTML=`
-      <div class="movie " id="${id}" onclick="openPopup('${overview}');">
+      <div class="movie " id="${id}" onclick="openPopup('${overview}','${title}','${vote_average}');">
       <img src="${img_url+poster_path}" alt="${title}">
       <p>${title}</p>
   </div>`
@@ -32,13 +32,17 @@ function showmovies(data)
   });  
 }
 
-function openPopup(overview) {
+function openPopup(overview,titles,vote_average) {
   const modal = document.getElementById('myModal');
   const overviewText = document.getElementById('overviewText');
-  const closeBtn = document.getElementsByClassName('close')[0];
+  const title = document.getElementById('title');
+  const ratings = document.getElementById('ratings');
+  const closeBtn = document.getElementsByClassName('close')[0];//title//ratings
 
   overviewText.textContent = overview;
   modal.style.display = 'block';
+  title.innerHTML=titles;
+  ratings.innerHTML=vote_average;
 
   closeBtn.onclick = function() {
     modal.style.display = 'none';

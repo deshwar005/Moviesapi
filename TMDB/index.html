@@ -26,7 +26,7 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light  ">
-        <a class="navbar-brand" href="#"><img src="Netflix.svg"></a>
+        <a class="navbar-brand" href="#">DESH</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -74,15 +74,27 @@
 
         
       <div class="heading text-center mt-3  ">
-        <h1>Movies&Shows</h1>
+        <h1>Movies & Shows</h1>
     </div>
 
    <!-- Add the modal HTML structure -->
 <div id="myModal" class="modal">
-  <div class="modal-content">
-    <span class="close">&times;</span>
+  <div class="modal-content" style="position: relative;">
+    <span style="right: 0; position: absolute; padding: 10px;" class="close">&times;</span>
     <div class="descr">
-      <p id="overviewText"></p>
+      <h6 style="text-align-last: left; padding: 10px; color: black; font-weight: 700;">Title</h6>
+      <p style="text-align: left; padding: 10px;" id="title"></p>
+      <h6 style="text-align-last: left; padding: 10px; color: black; font-weight: 700;">Description</h6>
+      <p style="text-align: justify; padding: 10px;" id="overviewText"></p>
+    </div>
+
+    <div class="rating" style="display: flex;">
+      <div class="tl">
+        <h6 style="text-align-last: left; padding: 10px; color: black; font-weight: 700;">Ratings</h6>
+      </div>
+      <div class="vl">
+        <p style="text-align: left; padding: 10px;" id="ratings"></p>
+      </div>
     </div>
 
   </div>
