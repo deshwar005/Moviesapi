@@ -18,18 +18,37 @@ function showmovies(data)
    Main.innerHTML='';
 
   data.forEach(movie => {
-      const {title,poster_path}=movie;
+      const {title,poster_path,id,overview}=movie;
       const moviess=document.createElement('div');
       moviess.classList.add('movie');
 
       moviess.innerHTML=`
-      <div class="movie ">
+      <div class="movie " id="${id}" onclick="openPopup('${overview}');">
       <img src="${img_url+poster_path}" alt="${title}">
       <p>${title}</p>
   </div>`
   Main.appendChild(moviess);
 
   });  
+}
+
+function openPopup(overview) {
+  const modal = document.getElementById('myModal');
+  const overviewText = document.getElementById('overviewText');
+  const closeBtn = document.getElementsByClassName('close')[0];
+
+  overviewText.textContent = overview;
+  modal.style.display = 'block';
+
+  closeBtn.onclick = function() {
+    modal.style.display = 'none';
+  };
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  };
 }
 
 function horror()
